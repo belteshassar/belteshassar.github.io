@@ -1,0 +1,5 @@
+# Jekyll _site directory
+_site/
+
+# Running Jekyll locally
+Gemfile*
