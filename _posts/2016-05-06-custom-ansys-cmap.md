@@ -18,7 +18,7 @@ Before going out and searching for an alternative to the built in colormap, we s
 <a href="../assets/ansys_custom_cmaps_full.png" title="Click to view higher resolution">
 ![](../assets/ansys_custom_cmaps_small.png)</a>
 
-# Changing the Colormap in Ansys
+### Changing the Colormap in Ansys
 
 Having found the colormap you want to use, the question arises: How do I go about getting Ansys to use this new colormap? The help files are not very helpful in this regard and there is little information out there on the web so here is a step by step instruction.
 
@@ -27,9 +27,10 @@ Having found the colormap you want to use, the question arises: How do I go abou
 3. Set the desired number of contours (maximum 128) with `/cont,,ncont`.
 4. All subsequent plots will now use your custom colormap.
 
-# Creating a Colormap File
+### Creating a Colormap File
 
 The format of the Ansys colormap files can be found by saving the active colormap to file by issuing the command `/cmap,active,cmap,,create` and clicking on `WRITE`. This will create a file `active.cmap` in the working directory, which looks like
+
 ```
   *** COLOR MAP CREATED FOR THE WIN32C DRIVER ***
       0   100   100   100
@@ -60,6 +61,7 @@ The format of the Ansys colormap files can be found by saving the active colorma
       9   100     0     0
 
 ```
+
 Each line contains four numbers. First an ordinal and then the RGB components on a scale from 0 to 100, where 100 is maximum. For example, green would be written as `0   100     0`. The 16 entries at the top define GUI colors. The following nine entries define contours. It is possible to expand this list up to 128 entries.
 
 I have created [cmap files](../assets/cmaps.zip) based on the new matplotlib colormaps. Feel free to use them.
