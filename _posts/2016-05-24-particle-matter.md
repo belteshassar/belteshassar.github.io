@@ -9,6 +9,8 @@ There are several sources for particle matter, but traffic is probably the most 
 
 Let's investigate the influence of some specific factors!
 
+This post was prepared as a Jupyter Notebook using Python 2.7.
+
 
 ```python
 import matplotlib.pyplot as plt
