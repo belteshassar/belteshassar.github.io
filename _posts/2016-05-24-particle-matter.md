@@ -47,7 +47,7 @@ air_quality.plot()
 
 
 
-![png](../assets/20160524/output_5_1.png)
+![png](/assets/20160524/output_5_1.png)
 
 
 Some values around December 2015 are extremely high. This is likely to be a measurement error or corrupted data. Whatever the cause, let's drop all values above 400.
@@ -59,7 +59,7 @@ ax = air_quality.plot()
 ```
 
 
-![png](../assets/20160524/output_7_0.png)
+![png](/assets/20160524/output_7_0.png)
 
 
 Leading and trailing `NaN` have no pratical use so let's remove them but keep the interspersed ones.
@@ -78,7 +78,7 @@ air_quality.plot()
 
 
 
-![png](../assets/20160524/output_9_1.png)
+![png](/assets/20160524/output_9_1.png)
 
 
 ## Seasonal Effects
@@ -102,7 +102,7 @@ mean_by_month.plot(kind='bar')
 
 
 
-![png](../assets/20160524/output_11_1.png)
+![png](/assets/20160524/output_11_1.png)
 
 
 As expected, large values are recorded in March and April. This time of year, road are snow free and the temperatures climb to double digits (centigrade) on a fine day, while drivers still haven't changed over from the studded tyres used in Scandinavia during winter. Likewise, the icy roads in January seems to bind particles since the lowest average is recorded in this month.
@@ -121,7 +121,7 @@ ax = mean_by_weekday.plot(kind='bar')
 ```
 
 
-![png](../assets/20160524/output_14_0.png)
+![png](/assets/20160524/output_14_0.png)
 
 
 As expected, air quality is better on weekends, but the effect is rather small.
@@ -197,7 +197,7 @@ pm_by_precipitation.mean().plot(kind='bar')
 
 
 
-![png](../assets/20160524/output_20_1.png)
+![png](/assets/20160524/output_20_1.png)
 
 
 Small amounts of precipitation do indeed lower the amount of particle matter, but the effect vanishes already at 2 mm/day.
@@ -289,7 +289,7 @@ pm_by_wind_speed..plot(kind='bar')
 
 
 
-![png](../assets/20160524/output_24_1.png)
+![png](/assets/20160524/output_24_1.png)
 
 
 Stronger winds seem to reduce the amount of particle matter in the air. What about the direction?
@@ -313,7 +313,7 @@ mean_pm_by_wind_direction.plot(kind='bar')
 
 
 
-![png](../assets/20160524/output_26_1.png)
+![png](/assets/20160524/output_26_1.png)
 
 
 Surprisingly, the direction of the wind seems to have a strong impact on the amount of particle matter. Perhaps this is due to local effects around the point of measurement, or perhaps a consequence of seasonal variations in wind direction.
@@ -375,7 +375,7 @@ mean_pm_by_air_temp_max.plot(kind='bar')
 
 
 
-![png](../assets/20160524/output_30_1.png)
+![png](/assets/20160524/output_30_1.png)
 
 
 Really warm summer days seem to increase the amount of particle matter. We can also see a peak corresponding to warm spring days.
@@ -436,7 +436,7 @@ mean_pm_by_humidity.plot(kind='bar')
 
 
 
-![png](../assets/20160524/output_34_1.png)
+![png](/assets/20160524/output_34_1.png)
 
 
 It does indeed seem that high humidity leads to lower amounts of particle matter.
@@ -591,7 +591,7 @@ ax.set_ylabel('log(Predicted)')
 
 
 
-![png](../assets/20160524/output_50_1.png)
+![png](/assets/20160524/output_50_1.png)
 
 
 
@@ -616,7 +616,7 @@ ax.set_ylim([y.min(), y.max()])
 
 
 
-![png](../assets/20160524/output_51_1.png)
+![png](/assets/20160524/output_51_1.png)
 
 
 Train the SVR using all but the last 90 days of data and use this model to predict the last 90 days.
@@ -647,7 +647,7 @@ res.plot()
 
 
 
-![png](../assets/20160524/output_53_1.png)
+![png](/assets/20160524/output_53_1.png)
 
 
 The model does indeed seem to have som predictive power, even though it fails to predict the highest peaks.

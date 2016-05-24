@@ -5,7 +5,7 @@ title: "Custom Colormaps in Ansys APDL"
 
 I do a fair amount of finite element analysis in my daily work. I use Ansys and usually Ansys APDL (or Ansys Classic, as it is sometimes called). The default colormap in Ansys APDL is lacking in several regards. It does not work well when printed in greyscale or for people with colorblindness. There are other problems as well, but being impossible to interpret in greyscale should really be enough to disqualify it from any work that might eventually get printed. I write this post mostly for my future self, but I decided to share it in case someone will find it useful.
 
-![](../assets/ansys_greyscale.png)
+![](/assets/ansys_greyscale.png)
 
 Before going out and searching for an alternative to the built in colormap, we should probably list the characteristics of a good colormap. Thankfully, the people who build [matplotlib](http://matplotlib.org), a powerful plotting library for Python, have produced such a [list](http://matplotlib.org/devel/color_changes.html?highlight=colormap#default-heat-map-colormap) as well as four excellent colormaps that share these characteristics. Here is the list in short form:
 
@@ -15,8 +15,8 @@ Before going out and searching for an alternative to the built in colormap, we s
 * It should have a **variation in hue**.
 * The variation in hue should produce reasonable results even for viewers with the more common types of **colorblindness**.
 
-<a href="../assets/ansys_custom_cmaps_full.png" title="Click to view higher resolution">
-![](../assets/ansys_custom_cmaps_small.png)</a>
+<a href="/assets/ansys_custom_cmaps_full.png" title="Click to view higher resolution">
+![](/assets/ansys_custom_cmaps_small.png)</a>
 
 ### Changing the Colormap in Ansys
 
@@ -64,4 +64,4 @@ The format of the Ansys colormap files can be found by saving the active colorma
 
 Each line contains four numbers. First an ordinal and then the RGB components on a scale from 0 to 100, where 100 is maximum. For example, green would be written as `0   100     0`. The 16 entries at the top define GUI colors. The following nine entries define contours. It is possible to expand this list up to 128 entries.
 
-I have created [cmap files](../assets/cmaps.zip) based on the new matplotlib colormaps. Feel free to use them.
+I have created [cmap files](/assets/cmaps.zip) based on the new matplotlib colormaps. Feel free to use them.
